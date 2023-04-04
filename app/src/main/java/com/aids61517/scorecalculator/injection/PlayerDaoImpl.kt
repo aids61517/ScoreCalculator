@@ -1,10 +1,10 @@
 package com.aids61517.scorecalculator.injection
 
 import com.aids61517.scorecalculator.database.AppDatabase
-import com.aids61517.scorecalculator.database.dao.UserDao
+import com.aids61517.scorecalculator.database.dao.PlayerDao
 import org.koin.core.annotation.Single
 
 @Single
-class UserDaoImpl(
+class PlayerDaoImpl(
     private val database: AppDatabase,
-) : UserDao by database.userDao()
+) : PlayerDao by database.userDao()

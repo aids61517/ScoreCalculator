@@ -1,27 +1,22 @@
 package com.aids61517.scorecalculator.main
 
-import android.app.Application
-import android.content.ClipboardManager
-import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.aids61517.scorecalculator.repository.UserRepository
-import kotlinx.coroutines.Dispatchers
+import com.aids61517.scorecalculator.repository.PlayerRepository
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import org.koin.android.annotation.KoinViewModel
 
 @KoinViewModel
 class MainViewModel(
-    private val userRepository: UserRepository,
+    private val playerRepository: PlayerRepository,
 ) : ViewModel() {
 
     val isNewGameEnabled = MutableLiveData<Boolean>()
 
     init {
         viewModelScope.launch {
-            userRepository.observeAllUser()
+            playerRepository.observeAllPlayer()
                 .collect {
                     isNewGameEnabled.value = it.isNotEmpty()
                 }

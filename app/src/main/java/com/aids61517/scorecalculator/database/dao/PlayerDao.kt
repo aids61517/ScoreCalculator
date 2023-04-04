@@ -1,13 +1,13 @@
 package com.aids61517.scorecalculator.database.dao
 
 import androidx.room.*
-import com.aids61517.scorecalculator.database.entity.UserEntity
+import com.aids61517.scorecalculator.database.entity.PlayerEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface UserDao {
-    @Query("select * from ${UserEntity.TABLE_NAME}")
-    fun observe(): Flow<List<UserEntity>>
+interface PlayerDao {
+    @Query("select * from ${PlayerEntity.TABLE_NAME}")
+    fun observe(): Flow<List<PlayerEntity>>
 
 //    @Query("select * from ${UserEntity.TABLE_NAME}")
 //    fun getAll(): List<UserEntity>

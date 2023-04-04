@@ -4,12 +4,12 @@ import android.app.Application
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.aids61517.scorecalculator.database.dao.UserDao
-import com.aids61517.scorecalculator.database.entity.UserEntity
+import com.aids61517.scorecalculator.database.dao.PlayerDao
+import com.aids61517.scorecalculator.database.entity.PlayerEntity
 
-@androidx.room.Database(entities = [UserEntity::class], version = 1)
+@androidx.room.Database(entities = [PlayerEntity::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun userDao(): UserDao
+    abstract fun userDao(): PlayerDao
 
     companion object {
         fun createInstance(application: Application): AppDatabase = buildDatabase(application)

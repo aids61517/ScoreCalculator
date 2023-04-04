@@ -1,20 +1,19 @@
 package com.aids61517.scorecalculator.repository
 
-import com.aids61517.scorecalculator.database.dao.UserDao
-import com.aids61517.scorecalculator.database.entity.UserEntity
-import com.aids61517.scorecalculator.model.User
-import com.aids61517.scorecalculator.model.toUser
+import com.aids61517.scorecalculator.database.dao.PlayerDao
+import com.aids61517.scorecalculator.model.Player
+import com.aids61517.scorecalculator.model.toPlayer
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import org.koin.core.annotation.Single
 
 @Single
-class UserRepository(
-    private val userDao: UserDao,
+class PlayerRepository(
+    private val playerDao: PlayerDao,
 ) {
-    fun observeAllUser(): Flow<List<User>> {
-        return userDao.observe()
-            .map { it.map { it.toUser() } }
+    fun observeAllPlayer(): Flow<List<Player>> {
+        return playerDao.observe()
+            .map { it.map { it.toPlayer() } }
     }
 
 //    fun getAllCopy(): List<User> {

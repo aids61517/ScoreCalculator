@@ -3,12 +3,12 @@ package com.aids61517.scorecalculator.database.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = UserEntity.TABLE_NAME)
-data class UserEntity(
+@Entity(tableName = PlayerEntity.TABLE_NAME)
+data class PlayerEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val name: String,
 ) {
     companion object {
-        const val TABLE_NAME = "user"
+        const val TABLE_NAME = "player"
     }
 }
