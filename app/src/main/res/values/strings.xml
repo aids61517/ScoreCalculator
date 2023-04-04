@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">計分器</string>
+    <string name="text_copied">已複製</string>
+    <string name="new_game">開啟新局</string>
+</resources>
