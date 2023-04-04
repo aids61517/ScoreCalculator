@@ -2,4 +2,8 @@
     <string name="app_name">計分器</string>
     <string name="text_copied">已複製</string>
     <string name="new_game">開啟新局</string>
+    <string name="player_manage">玩家管理</string>
+    <string name="add_player_title">請輸入玩家名稱</string>
+    <string name="add">新增</string>
+    <string name="cancel">取消</string>
 </resources>

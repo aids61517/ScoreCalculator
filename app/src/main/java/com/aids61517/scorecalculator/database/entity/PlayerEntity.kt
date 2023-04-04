@@ -5,8 +5,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = PlayerEntity.TABLE_NAME)
 data class PlayerEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val name: String,
+    val active: Boolean,
 ) {
     companion object {
         const val TABLE_NAME = "player"
