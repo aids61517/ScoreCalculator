@@ -9,6 +9,9 @@ interface PlayerDao {
     @Query("select * from ${PlayerEntity.TABLE_NAME}")
     fun observe(): Flow<List<PlayerEntity>>
 
+    @Query("select * from ${PlayerEntity.TABLE_NAME}")
+    fun getAll(): List<PlayerEntity>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(playerEntity: PlayerEntity): Long
 

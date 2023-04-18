@@ -17,6 +17,11 @@ class PlayerRepository(
             .map { it.map { it.toPlayer() } }
     }
 
+    fun getPlayer(): List<Player> {
+        return playerDao.getAll()
+            .map { it.toPlayer() }
+    }
+
     fun addPlayer(name: String): Player {
         val id = playerDao.insert(PlayerEntity(name = name, active = true))
         return playerDao.getById(id).toPlayer()
