@@ -24,6 +24,8 @@
         </activity>
 
         <activity android:name=".playermanage.PlayerManageActivity" />
+
+        <activity android:name=".newgame.NewGameActivity" />
     </application>
 
 </manifest>

@@ -6,4 +6,7 @@
     <string name="add_player_title">請輸入玩家名稱</string>
     <string name="add">新增</string>
     <string name="cancel">取消</string>
+
+    <string name="mahjong_basic_price">底</string>
+    <string name="mahjong_extra_point_price">台</string>
 </resources>
